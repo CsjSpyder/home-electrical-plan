@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow"><meta name="theme-color" content="#1c4b64">
+<title>76㎡三房两卫 · 电位图查看</title>
+<meta name="description" content="只读电位图，点击查看灯具、开关、电源预留及关联信息。">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231c4b64'/%3E%3Cpath d='M7 25V7h18v18H7m0-10h10V7m0 8h8' stroke='white' fill='none'/%3E%3Ccircle cx='17' cy='15' r='3' fill='%23efba63'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="viewer.css"><script defer src="viewer.js"></script>
+</head>
+<body>
+<header><div><p class="eyebrow">电位工作台 / 只读查看</p><h1 id="title">76㎡三房两卫</h1></div><button id="listButton">点位清单</button></header>
+<main>
+<section class="controls" aria-label="图纸筛选"><nav id="layers" aria-label="图层"></nav><div class="filter-row"><label>区域 <select id="region"><option value="">全部区域</option></select></label><label class="check"><input id="links" type="checkbox">控制连线</label></div><div id="summary" role="status">正在载入指定项目…</div></section>
+<section class="plan-area" aria-label="电位图"><div id="canvas"><svg id="plan" xmlns="http://www.w3.org/2000/svg" aria-label="点击电位查看属性"></svg></div><div class="zoom"><button id="out" aria-label="缩小">−</button><span id="zoom">100%</span><button id="in" aria-label="放大">＋</button><button id="fit">全图</button></div><p class="hint">点击标记查看属性 · 双指缩放 / 单指平移</p></section>
+<footer><span>入户在左下角 · 仅查看，不改变原项目</span><span id="version"></span></footer>
+</main>
+<dialog id="details" aria-labelledby="detailTitle"><div class="dialog-top"><span id="detailId"></span><button class="close" aria-label="关闭属性">×</button></div><h2 id="detailTitle"></h2><div id="detailBody"></div></dialog>
+<dialog id="list" aria-labelledby="listTitle"><div class="dialog-top"><h2 id="listTitle">点位清单</h2><button class="close" aria-label="关闭清单">×</button></div><label class="search-label">查找编号、名称或区域<input id="search" type="search" placeholder="例如：L01、主卧、插座"></label><p class="subtle">跟随上方图层及区域筛选，包含待定位点位。</p><div id="rows"></div></dialog>
+</body></html>
